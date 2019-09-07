@@ -1,12 +1,175 @@
+<!-- * You'll create a trivia form with multiple choice or true/false options (your choice).
+* The player will have a limited amount of time to finish the quiz. 
+  * The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
+* Don't let the player pick more than one answer per question.
+* Don't forget to include a countdown timer. -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Disney Trivia Game!</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1><span>Disney Movie Trivia!</span></h1>
+
+			<div id="buttons">
+        		<button id="start">Click Here to Begin!</button>
+        	</div>
+			
+			<div class="container">
+				
+				<div id="timeRemaining">
+					<h2>Time Remaining: <div id="time"></div></h2>
+				</div>
+				<p id="question" class="showQuestion"></p>
+				<div id="allQuestions">
+					<tr>
+						<span id="question1">
+							<h3>How far up a tree can a typical sloth climb?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q1" value="false"> 60-80 feet</br>
+						</td>
+						<td>
+							<input type="radio" name="q1" value="false"> 6-8 inches</br>
+						</td>
+						<td>
+							<input type="radio" name="q1" value="true"> 6-8 feet</br>
+						</td>
+
+						<span id="question2">
+							<h3>How many hours does a typical sloth sleep in one day?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q2" value="true"> 20 hours</br>
+						</td>
+						<td>
+							<input type="radio" name="q2" value="false"> 24 hours</br>
+						</td>
+						<td>
+							<input type="radio" name="q2" value="false"> 2 hours</br>
+						</td>
+
+						<span id="question3">
+							<h3>Surprisingly, sloths are quite good at which of these activities?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q3" value="false"> Basketball</br>
+						</td>
+						<td>
+							<input type="radio" name="q3" value="false"> Running</br>
+						</td>
+						<td>
+							<input type="radio" name="q3" value="true"> Swimming</br>
+						</td>
+
+						<span id="question4">
+							<h3>How often does a sloth typically leave its tree to go potty?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q4" value="true"> Weekly</br>
+						</td>
+						<td>
+							<input type="radio" name="q4" value="false"> Monthly</br>
+						</td>
+						<td>
+							<input type="radio" name="q4" value="false"> Daily</br>
+						</td>
+
+						<span id="question5">
+							<h3>Where do sloths live?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q5" value="true"> South and Central America</br>
+						</td>
+						<td>
+							<input type="radio" name="q5" value="false"> College Dorms</br>
+						</td>
+						<td>
+							<input type="radio" name="q5" value="false"> Indonesia</br>
+						</td>
+
+						<span id="question6">
+							<h3>How long can sloths hold their breath underwater?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q6" value="false"> 5 Minutes</br>
+						</td>
+						<td>
+							<input type="radio" name="q6" value="false"> 25 Minutes</br>
+						</td>
+						<td>
+							<input type="radio" name="q6" value="true"> 40 Minutes</br>
+						</td>
+
+						<span id="question7">
+							<h3>Some extinct species of sloths used to be as big as...</h3>
+						</span>
+						<td>
+							<input type="radio" name="q7" value="false"> A T-Rex</br>
+						</td>
+						<td>
+							<input type="radio" name="q7" value="false"> An anteater</br>
+						</td>
+						<td>
+							<input type="radio" name="q7" value="true"> An elephant</br>
+						</td>
+
+						<span id="question8">
+							<h3>How does it take a sloth to digest 1 leaf?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q8" value="false"> 50 Days</br>
+						</td>
+						<td>
+							<input type="radio" name="q8" value="true"> 1 Month</br>
+						</td>
+						<td>
+							<input type="radio" name="q8" value="false"> 10 Days</br>
+						</td>
+
+						<span id="question9">
+							<h3>What creature does *not* live in a sloth's fur?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q9" value="false"> Beetles</br>
+						</td>
+						<td>
+							<input type="radio" name="q9" value="true"> Your puppy</br>
+						</td>
+						<td>
+							<input type="radio" name="q9" value="false"> Cockroaches</br>
+						</td>
+
+						<span id="question10">
+							<h3>What tends to grow on a sloth's fur because they move so slowly?</h3>
+						</span>
+						<td>
+							<input type="radio" name="q10" value="true"> Algae</br>
+						</td>
+						<td>
+							<input type="radio" name="q10" value="false"> Flowers</br>
+						</td>
+						<td>
+							<input type="radio" name="q10" value="false"> Grasses</br>
+						</td>
+					</tr>
+				</div>
+			<br>
+				<div id="buttons">
+        			<button id="submit">Submit Your Answers Here!</button>
+        		</div>
+
+        		<div id="answers">
+					<h2>Correct Answers: <span id="correctAnswers"></span></h2>
+					<h2>Incorrect Answers: <span id="incorrectAnswers"></span></h2>
+					<h2>Unanswered Questions: <span id="unansweredQuestions"></span></h2>
+				</div>
+				
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="assets/javascript/app.js"></script>
+			</body>
+		</html>

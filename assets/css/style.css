@@ -1,0 +1,26 @@
+body {
+	background-image: url("http://i.imgur.com/1ONpJUR.jpg");
+	background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    margin-left: 35px;
+}
+
+#wrapper {
+	background-color: white;
+    margin-right: 55%;
+    padding-left: 3%;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 10px;
+    margin-top: 5%;
+    border-style: solid;
+}
+
+#allQuestions {
+    display:none;
+}
+
+#answers {
+    display:none;
+}
