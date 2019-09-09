@@ -1,13 +1,9 @@
 body {
-	background-image: url("http://i.imgur.com/1ONpJUR.jpg");
-	background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-    margin-left: 35px;
+	background-image: url ("assets/images/disney2.jpg");
 }
 
 #wrapper {
-	background-color: white;
+	background-color: lightblue ;
     margin-right: 55%;
     padding-left: 3%;
     padding-top: 2px;
